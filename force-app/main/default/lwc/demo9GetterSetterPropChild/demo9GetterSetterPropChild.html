@@ -1,0 +1,31 @@
+<template>
+  <!-- lightning card -->
+  <lightning-card
+    title="Demo 9 Getter Setter Property Child Component"
+    icon-name="custom:custom14"
+  >
+    <!-- lightning input for first name and last name -->
+
+    <div class="slds-m-around_medium">
+      <lightning-input
+        label="First Name"
+        name="firstName"
+        onchange={handleNameChange}
+      ></lightning-input>
+    </div>
+    <div class="slds-m-around_medium">
+      <lightning-input
+        label="Last Name"
+        name="lastName"
+        onchange={handleNameChange}
+      ></lightning-input>
+    </div>
+
+    <!-- display full name in upper case -->
+    <div class="slds-m-around_medium">
+      <p class="slds-text-heading_medium">
+        Full Name (Upper Case): {fullNameUpperCase}
+      </p>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,30 @@
+<template>
+  <div class="slds-p-around_medium lgc-bg">
+    <lightning-tile label={contactDetails.name} href="/bruce.html" type="media">
+      <lightning-avatar
+        slot="media"
+        src="https://v1.lightningdesignsystem.com/assets/images/avatar1.jpg"
+        fallback-icon-name="standard:person_account"
+        alternative-text={contactDetails.name}
+      ></lightning-avatar>
+
+      <ul class="slds-list_horizontal slds-has-dividers_right">
+        <li class="slds-item">{contactDetails.title}</li>
+      </ul>
+
+      <lightning-button
+        label="Update contact name"
+        title="Update contact name"
+        onclick={handleUpdateContactName}
+        class="slds-m-left_x-small"
+      ></lightning-button>
+
+      <lightning-button
+        label="Update contact Title"
+        title="Update contact Title"
+        onclick={handleUpdateContactTitle}
+        class="slds-m-left_x-small"
+      ></lightning-button>
+    </lightning-tile>
+  </div>
+</template>

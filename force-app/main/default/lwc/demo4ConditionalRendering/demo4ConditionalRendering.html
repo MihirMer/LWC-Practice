@@ -1,0 +1,23 @@
+<template>
+  <lightning-card
+    title="Demo 4: Conditional Rendering Example"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-p-around_medium">
+      <lightning-input
+        type="checkbox"
+        label="Show Details"
+        name="input1"
+        onchange={handleChange}
+      ></lightning-input>
+
+      <template if:true={areDetailsVisible}>
+        <p>These details are visible when the checkbox is checked.</p>
+      </template>
+
+      <template if:false={areDetailsVisible}>
+        <p>Details will be hidden if above checkbox is checked.</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+  <!-- lightning card -->
+  <lightning-card title="Demo 10 Parent Calling Child Method">
+    <div class="slds-m-around_medium">
+      <lightning-button
+        label="Refresh Timestamp"
+        onclick={handleRefreshTimestamp}
+      ></lightning-button>
+
+      <c-demo10-child class="slds-m-left_medium"></c-demo10-child>
+    </div>
+  </lightning-card>
+</template>

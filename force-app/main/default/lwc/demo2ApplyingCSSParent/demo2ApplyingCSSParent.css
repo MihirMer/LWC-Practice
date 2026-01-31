@@ -1,0 +1,11 @@
+h1 {
+  font-size: xx-large;
+  color: blue;
+}
+
+/* Apply css to child components from parent componenet */
+
+c-demo2-applying-c-s-s-child {
+  display: block;
+  border: 2px solid red;
+}
