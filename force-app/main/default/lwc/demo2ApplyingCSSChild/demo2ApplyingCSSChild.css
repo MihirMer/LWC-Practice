@@ -1,0 +1,9 @@
+h1 {
+  font-size: xx-large;
+  color: green;
+}
+
+:host {
+  display: block;
+  background-color: yellow;
+}

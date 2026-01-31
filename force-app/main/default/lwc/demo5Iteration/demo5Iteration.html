@@ -1,0 +1,29 @@
+<template>
+  <!-- lightning card -->
+  <lightning-card title="Demo 5: for each" icon-name="custom:custom14">
+    <ul class="slds-m-around_medium">
+      <template for:each={contacts} for:item="contact">
+        <li key={contact.id}>Name: {contact.name}, Title: {contact.title}</li>
+      </template>
+    </ul>
+  </lightning-card>
+
+  <!-- lightning card for iterator demo -->
+  <lightning-card
+    title="Demo 5: iterator"
+    icon-name="custom:custom14"
+    class="slds-m-top_medium"
+  >
+    <ul class="slds-m-around_medium">
+      <template iterator:contact={contacts}>
+        <li key={contact.value.id}>
+          <div if:true={contact.first} class="list-first"></div>
+
+          Name: {contact.value.name}, Title: {contact.value.title}
+
+          <div if:true={contact.last} class="list-last"></div>
+        </li>
+      </template>
+    </ul>
+  </lightning-card>
+</template>

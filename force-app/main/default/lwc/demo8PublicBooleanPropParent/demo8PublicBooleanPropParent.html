@@ -1,0 +1,17 @@
+<template>
+  <!-- lightning card to demo public boolean properties -->
+  <lightning-card
+    title="Demo 8: Public Boolean Property"
+    icon-name="custom:custom63"
+  >
+    <div class="slds-p-around_medium">
+      <!-- Using the child component without the boolean property (defaults to false) -->
+      <c-demo8-public-boolean-prop-child></c-demo8-public-boolean-prop-child>
+
+      <!-- Using the child component with the boolean property set to true -->
+      <c-demo8-public-boolean-prop-child
+        visible
+      ></c-demo8-public-boolean-prop-child>
+    </div>
+  </lightning-card>
+</template>

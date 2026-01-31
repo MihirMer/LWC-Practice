@@ -1,0 +1,14 @@
+<template>
+  <!-- lightning card for Public properties demo -->
+
+  <lightning-card title="Demo 7: Public Properties" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+      <template for:each={contacts} for:item="contact">
+        <div key={contact.id}>
+          <c-demo7-public-properties-contact-details contact-details={contact}>
+          </c-demo7-public-properties-contact-details>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,39 @@
+<template>
+  <!-- lightning card component -->
+
+  <lightning-card
+    title="Demo 3:Data Binding Example"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-m-around_medium">
+      <p class="slds-m-top_medium">Hello, {greeting}!</p>
+
+      <lightning-input
+        type="text"
+        label="Name"
+        value={greeting}
+        onchange={handleChange}
+      ></lightning-input>
+
+      <br />
+
+      <lightning-input
+        type="text"
+        label="First name"
+        name="firstName"
+        onchange={handleNameChange}
+      ></lightning-input>
+
+      <lightning-input
+        type="text"
+        label="Last name"
+        name="lastName"
+        onchange={handleNameChange}
+      ></lightning-input>
+
+      <p class="slds-m-top_medium">
+        Full Name: {fullName.firstName} {fullName.lastName}
+      </p>
+    </div>
+  </lightning-card>
+</template>
