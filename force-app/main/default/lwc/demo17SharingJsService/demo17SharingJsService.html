@@ -1,0 +1,47 @@
+<template>
+  <!-- lightning card -->
+  <lightning-card title="Mortgage Calculator" icon-name="standard:opportunity">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="number"
+        label="Loan Amount"
+        value={principal}
+        onchange={handlePrincipalChange}
+      ></lightning-input>
+
+      <lightning-input
+        type="number"
+        label="Interest Rate (%)"
+        value={rate}
+        onchange={handleRateChange}
+      ></lightning-input>
+      <lightning-combobox
+        name="loanTerm"
+        label="Loan Term (Years)"
+        value={term}
+        placeholder="Select Loan Term"
+        options={termOptions}
+        required
+        onchange={handleTermChange}
+      ></lightning-combobox>
+
+      <div class="slds-m-top_medium">
+        <lightning-button
+          label="Calculate Monthly Payment"
+          onclick={handleCalculatePayment}
+          variant="brand"
+        ></lightning-button>
+      </div>
+
+      <template if:true={monthlyPayment}>
+        <div class="slds-m-top_medium">
+          <lightning-formatted-number
+            value={monthlyPayment}
+            format-style="currency"
+            currency-code="USD"
+          ></lightning-formatted-number>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>
