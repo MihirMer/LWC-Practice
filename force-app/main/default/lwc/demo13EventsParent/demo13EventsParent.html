@@ -1,0 +1,32 @@
+<template>
+  <!-- lightning card for Public properties demo -->
+
+  <lightning-card title="Demo 13: Events" icon-name="custom:custom14">
+    <!-- lightning layout -->
+
+    <lightning-layout horizontal-align="center" class="slds-m-around_medium">
+      <lightning-layout-item>
+        <div class="slds-m-around_medium">
+          <template for:each={contacts} for:item="contact">
+            <div key={contact.id}>
+              <c-demo13-events-child
+                contact-details={contact}
+                oncontactselect={handleContactSelect}
+              >
+              </c-demo13-events-child>
+            </div>
+          </template>
+        </div>
+      </lightning-layout-item>
+      <lightning-layout-item class="slds-m-around_medium">
+        <template if:true={selectedContact}>
+          <p class="slds-text-heading_medium slds-m-bottom_small">
+            Selected Contact Details:
+          </p>
+          <p class="slds-text-body_regular">Name: {selectedContact.name}</p>
+          <p class="slds-text-body_regular">Title: {selectedContact.title}</p>
+        </template>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+</template>
